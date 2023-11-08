@@ -1,2 +1,7 @@
 # MyProject
- Kişisel geliştirmelerimin olduğu "proje deposu" diyebliriz.
+ Kişisel geliştirmelerimin olduğu "Proje Deposu" diyebliriz.
+
+ Genel olarak kendimi kodlara ısındırmak için yapacağım.
+ Developer olmak için..
+
+ 
