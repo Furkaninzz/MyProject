@@ -14,3 +14,17 @@ $(window).on('scroll', function() {
     
     prevScrollpos = currentScrollPos;
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Preloader'ı 2 saniye boyunca görünür tut, ardından gizle
+    setTimeout(function() {
+        var preloader = document.querySelector('.preloader');
+        preloader.style.opacity = '0';
+        setTimeout(function() {
+            preloader.style.display = 'none';
+            var content = document.querySelector('.content');
+            content.style.opacity = '1';
+            content.style.display = 'block';
+        }, 1000);
+    }, 1000);
+});
