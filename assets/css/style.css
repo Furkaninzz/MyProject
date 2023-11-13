@@ -28,7 +28,9 @@
     background: gray;
     transition: 1s;
   }
-
+  body{
+	padding-top: 110px;
+  }
   .preloader {
     position: fixed;
     top: 0;
