@@ -1,114 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Smooth scroll */
-:root {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-  }
-  
-  /* width */
-  ::-webkit-scrollbar {
-    width: 13px;
-    background-color: white;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px white;
-    background: none;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: black;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: gray;
-    transition: 1s;
-  }
-  body{
-	padding-top: 110px;
-  }
-  .preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-}
-
-.spinner {
-    border: 8px solid #3498db;
-    border-top: 8px solid transparent;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite, fadeIn 1s ease-in-out;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* Navbardaki Theme Switch Button'u */
-
 * {
 	border: 0;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: 'Poppins', sans-serif;
 }
+
+:root {
+	scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 13px;
+	background-color: white;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px white;
+	background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: gray;
+	transition: 1s;
+}
+
+body {
+	padding-top: 110px;
+}
+
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
+}
+
+.spinner {
+	border: 8px solid #3498db;
+	border-top: 8px solid transparent;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	animation: spin 1s linear infinite, fadeIn 1s ease-in-out;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Navbardaki Theme Switch Button'u Başlangıcı */
+
 .switch {
 	--hue: 223;
-	--bg: hsl(var(--hue),10%,90%);
-	--fg: hsl(var(--hue),10%,10%);
-	--primary: hsl(var(--hue),90%,50%);
+	--bg: hsl(var(--hue), 10%, 90%);
+	--fg: hsl(var(--hue), 10%, 10%);
+	--primary: hsl(var(--hue), 90%, 50%);
 	--trans-dur: 0.3s;
-	--trans-timing: cubic-bezier(0.76,0.05,0.24,0.95);
-	--trans-timing-in: cubic-bezier(0.76,0.05,0.86,0.06);
-	--trans-timing-out: cubic-bezier(0.05,0.76,0.06,0.86);
-	font-size: calc(8px + (80 - 40) * (100vw - 320px) / (2560 - 320));
+	--trans-timing: cubic-bezier(0.76, 0.05, 0.24, 0.95);
+	--trans-timing-in: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+	--trans-timing-out: cubic-bezier(0.05, 0.76, 0.06, 0.86);
+	font-size: calc(4px + (80 - 40) * (100vw - 320px) / (2560 - 320));
 }
+
 body,
 input {
 	color: var(--fg);
 	font: 1em/1.5 sans-serif;
 }
-body {
-	background-color: var(--bg);
-	display: flex;
-	height: 100vh;
-	transition:
-		background-color var(--trans-dur),
-		color var(--trans-dur);
-}
-body:has(.switch__input:checked) {
-	background-color: var(--fg);
-	color: var(--bg);
-}
+
 .switch {
-	margin: auto;
 	position: relative;
 }
+
 .switch__icon,
 .switch__input {
 	display: block;
 }
+
 .switch__icon {
 	position: absolute;
 	top: 0.375em;
@@ -119,25 +123,29 @@ body:has(.switch__input:checked) {
 		opacity calc(var(--trans-dur) / 2),
 		transform calc(var(--trans-dur) / 2);
 }
+
 .switch__icon polyline {
 	transition: stroke-dashoffset calc(var(--trans-dur) / 2);
 }
+
 .switch__icon--light,
 .switch__icon--light polyline {
 	transition-delay: calc(var(--trans-dur) / 2);
 	transition-timing-function: var(--trans-timing-out);
 }
+
 .switch__icon--dark {
 	opacity: 0;
 	transform: translateX(-0.75em) rotate(30deg) scale(0.75);
 	transition-timing-function: var(--trans-timing-in);
 }
+
 .switch__input {
-	background-color: hsl(210,90%,70%);
+	background-color: hsl(210, 90%, 70%);
 	border-radius: 0.75em;
 	box-shadow:
-		0 0 0 0.125em hsla(var(--hue),90%,50%,0),
-		0.125em 0.125em 0.25em hsla(var(--hue),90%,10%,0.2);
+		0 0 0 0.125em hsla(var(--hue), 90%, 50%, 0),
+		0.125em 0.125em 0.25em hsla(var(--hue), 90%, 10%, 0.2);
 	outline: transparent;
 	position: relative;
 	width: 3em;
@@ -149,29 +157,33 @@ body:has(.switch__input:checked) {
 		background-color var(--trans-dur) var(--trans-timing),
 		box-shadow 0.15s linear;
 }
+
 .switch__input:focus-visible {
 	box-shadow:
-		0 0 0 0.125em hsl(var(--hue),90%,50%),
-		0.125em 0.125em 0.25em hsla(var(--hue),90%,10%,0.2);
+		0 0 0 0.125em hsl(var(--hue), 90%, 50%),
+		0.125em 0.125em 0.25em hsla(var(--hue), 90%, 10%, 0.2);
 }
+
 .switch__input:before,
 .switch__input:after {
 	content: "";
 	display: block;
 	position: absolute;
 }
+
 .switch__input:before {
-	background-color: hsl(50,90%,50%);
+	background-color: hsl(50, 90%, 50%);
 	border-radius: inherit;
-	mask-image: linear-gradient(120deg,hsl(0,0%,0%) 20%,hsla(0,0%,0%,0) 80%);
-	-webkit-mask-image: linear-gradient(120deg,hsl(0,0%,0%) 20%,hsla(0,0%,0%,0) 80%);
+	mask-image: linear-gradient(120deg, hsl(0, 0%, 0%) 20%, hsla(0, 0%, 0%, 0) 80%);
+	-webkit-mask-image: linear-gradient(120deg, hsl(0, 0%, 0%) 20%, hsla(0, 0%, 0%, 0) 80%);
 	inset: 0;
 	transition: background-color var(--trans-dur) var(--trans-timing);
 }
+
 .switch__input:after {
-	background-color: hsl(0,0%,100%);
+	background-color: hsl(0, 0%, 100%);
 	border-radius: 50%;
-	box-shadow: 0.05em 0.05em 0.05em hsla(var(--hue),90%,10%,0.1);
+	box-shadow: 0.05em 0.05em 0.05em hsla(var(--hue), 90%, 10%, 0.1);
 	top: 0.125em;
 	left: 0.125em;
 	width: 1.25em;
@@ -181,34 +193,42 @@ body:has(.switch__input:checked) {
 		transform var(--trans-dur) var(--trans-timing);
 	z-index: 1;
 }
+
 .switch__input:checked {
-	background-color: hsl(290,90%,40%);
+	background-color: hsl(290, 90%, 40%);
 }
+
 .switch__input:checked:before {
-	background-color: hsl(220,90%,40%);
+	background-color: hsl(220, 90%, 40%);
 }
+
 .switch__input:checked:after {
-	background-color: hsl(0,0%,0%);
+	background-color: hsl(0, 0%, 0%);
 	transform: translateX(1.5em);
 }
-.switch__input:checked ~ .switch__icon--light,
-.switch__input:checked ~ .switch__icon--light polyline {
+
+.switch__input:checked~.switch__icon--light,
+.switch__input:checked~.switch__icon--light polyline {
 	transition-delay: 0s;
 	transition-timing-function: var(--trans-timing-in);
 }
-.switch__input:checked ~ .switch__icon--light {
+
+.switch__input:checked~.switch__icon--light {
 	opacity: 0;
 	transform: translateX(-0.75em) rotate(-30deg) scale(0.75);
 }
-.switch__input:checked ~ .switch__icon--light polyline {
+
+.switch__input:checked~.switch__icon--light polyline {
 	stroke-dashoffset: 1.5;
 }
-.switch__input:checked ~ .switch__icon--dark {
+
+.switch__input:checked~.switch__icon--dark {
 	opacity: 1;
 	transform: translateX(-1.5em);
 	transition-delay: calc(var(--trans-dur) / 2);
 	transition-timing-function: var(--trans-timing-out);
 }
+
 .switch__sr {
 	overflow: hidden;
 	position: absolute;
@@ -216,5 +236,83 @@ body:has(.switch__input:checked) {
 	height: 1px;
 }
 
-/* Navbardaki Theme Switch Button'u */
+/* Navbardaki Theme Switch Button'u Bitişi */
 
+/* Navbardaki arama Button'u Başlangıcı */
+.input-box {
+	position: relative;
+	width: 100%;
+	max-width: 60px;
+	height: 55px;
+	margin: 0 50px;
+	background-color: #fff;
+	border-radius: 6px;
+	transition: all 0.5s ease-in-out;
+}
+
+.input-box.open {
+	max-width: 350px;
+}
+
+.input-box input {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	font-weight: 400;
+	color: #333;
+	padding: 0 15px;
+	border: none;
+	border-radius: 6px;
+	outline: none;
+	transition: all 0.5s ease-in-out;
+}
+
+.input-box.open input {
+	padding: 0 15px 0 65px;
+}
+
+.input-box .search {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.input-box.open .search {
+	border-radius: 6px 0 0 6px;
+}
+
+.search .search-icon {
+	font-size: 30px;
+	color: #1c1c1c;
+}
+
+.input-box .close-icon {
+	position: absolute;
+	top: 50%;
+	right: -45px;
+	font-size: 30px;
+	color: #1c1c1c;
+	padding: 5px;
+	transform: translateY(-50%);
+	transition: all 0.5s ease-in-out;
+	cursor: pointer;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.input-box.open .close-icon {
+	transform: translateY(-50%) rotate(180deg);
+	pointer-events: auto;
+	opacity: 1;
+}
+
+/* Navbardaki arama Button'u bitişi */
