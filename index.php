@@ -18,6 +18,7 @@ require_once 'main.php';
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/vendor/bootstrap-5.3.2-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <title><?= $_SESSION['page-title'] ?></title>
 
 </head>
@@ -88,12 +89,12 @@ require_once 'main.php';
   </div>
   <header>
   </header>
-  <main class="mb-5 pb-5">
-    <?php require_once "home-page.html" ?>
+  <main>
+    <?php include "login.html" ?>
   </main>
 
-  <footer class="bg-light p-0 m-0">
-    <p class="text-center"><?= $_SESSION['page-title'] ?> &copy; Tüm hakları saklıdır.</p>
+  <footer class="bg-light shadow-lg">
+    <p class="ps-5"><?= $_SESSION['page-title'] ?> &copy; Tüm hakları saklıdır.</p>
   </footer>
   <script src="assets/vendor/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
   <script src="assets/vendor/jquery-3.7.1/jquery-3.7.1.min.js"></script>

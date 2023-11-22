@@ -316,3 +316,14 @@ input {
 }
 
 /* Navbardaki arama Button'u bitişi */
+
+#login{
+	--size:calc(48vh / 2);
+	padding-top: 12px;
+	margin-top: var(--size);
+	margin-bottom: var(--size);
+
+}
+#login div{
+	margin-bottom: 24px;
+}
