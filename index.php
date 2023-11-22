@@ -17,8 +17,10 @@ require_once 'main.php';
   <link rel="manifest" href="assets/favicon/black/site.webmanifest">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/vendor/bootstrap-5.3.2-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <link rel="stylesheet" href="assets/css/search-engine.css">
+  <link rel="stylesheet" href="assets/css/theme-switch.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title><?= $_SESSION['page-title'] ?></title>
 
 </head>
