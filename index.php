@@ -51,8 +51,8 @@ if ($_GET) {
               <i class="uil uil-user fs-3"></i>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="index.php?page=login"><i class="uil uil-chat-bubble-user"></i> Giriş Yap</a></li>
-                <li><a class="dropdown-item" href="index.php?page=singup"><i class="uil uil-user-plus"></i> Kayıt Ol</a></li>
+                <li><a class="dropdown-item" href="index.php?page=login"><i class="uil uil-chat-bubble-user fs-2"></i> Giriş Yap</a></li>
+                <li><a class="dropdown-item" href="index.php?page=singup"><i class="uil uil-user-plus fs-2"></i> Kayıt Ol</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
