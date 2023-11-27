@@ -1,5 +1,5 @@
 #login{
-	--size:calc(48vh / 2);
+	--size:calc(45vh / 2);
 	padding-top: 12px;
 	margin-top: var(--size);
 	margin-bottom: var(--size);
@@ -11,4 +11,18 @@
 #login h4{
     margin-bottom: 48px !important;
 }
+
+#singup{
+	--size:calc(39vh / 2);
+	padding-top: 12px;
+	margin-top: var(--size);
+
+}
+#singup div{
+	margin-bottom: 24px;
+}
+#singup h4{
+    margin-bottom: 48px !important;
+}
+
 

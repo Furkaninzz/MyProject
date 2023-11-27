@@ -26,18 +26,26 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(45deg, blue, red);;
+	background: linear-gradient(45deg, black, gray);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: ;
+	background: lightslategray;
 	transition: 1s;
 }
 body {
 	padding: 0;
 	margin: 0;
 	padding-top: 110px;
+}
+footer{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.text-justify{
+	text-align: justify;
 }
 
 .preloader {

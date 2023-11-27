@@ -42,3 +42,12 @@ searchIcon.addEventListener('click', () => {
 closeIcon.addEventListener('click', () => {
   inputBox.classList.remove('open');
 });
+
+function changeColor() {
+  var swBox = document.getElementById("sw_input");
+  if (swBox.checked == true){
+    document.body.style.backgroundColor = "#000";
+  } else {
+    document.body.style.backgroundColor = "#fff";
+  }
+}

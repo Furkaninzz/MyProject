@@ -1,5 +1,11 @@
 <?php
 require_once 'main.php';
+
+if ($_GET) {
+  if (isset($_GET["page"])) $page = $_GET["page"];
+  else header("Location:", "index.php");
+  
+}
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -22,7 +28,7 @@ require_once 'main.php';
   <link rel="stylesheet" href="assets/css/theme-switch.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/login.css">
-  
+
   <title><?= $_SESSION['page-title'] ?></title>
 
 </head>
@@ -31,26 +37,26 @@ require_once 'main.php';
   <div class="p-4 fixed-top">
     <nav class="navbar navbar-expand-lg bg-body-tertiary rounded-4 shadow-lg border border-light-subtle px-5">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.php"><img src="assets/favicon/black/favicon-32x32.png"></a>
+        <a class="navbar-brand" href="index.php"><img src="assets/favicon/black/android-chrome-512x512.png" width="40"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav align-items-center me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+              <a class="nav-link active" aria-current="page" href="index.php">Anasayfa</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Açılır Menü
+              <i class="uil uil-user fs-3"></i>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="index.php?page=login"><i class="uil uil-chat-bubble-user"></i> Giriş Yap</a></li>
+                <li><a class="dropdown-item" href="index.php?page=singup"><i class="uil uil-user-plus"></i> Kayıt Ol</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="#"><i class="uil uil-user-times"></i> Çıkış Yap</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -64,7 +70,7 @@ require_once 'main.php';
             <i class="uil uil-times close-icon"></i>
           </div>
           <label class="switch">
-            <input class="switch__input" type="checkbox" role="switch">
+            <input id = "sw_input" class="switch__input" type="checkbox" role="switch" onchange="changeColor()">
             <svg class="switch__icon switch__icon--light" viewBox="0 0 12 12" width="12px" height="8px" aria-hidden="true">
               <g fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round">
                 <circle cx="6" cy="6" r="2" />
@@ -94,14 +100,21 @@ require_once 'main.php';
   <header>
   </header>
   <main>
-    <?php include "login.html" ?>
+    <?php 
+    if (isset($page)){
+    if ($page == "login") include "login.html";
+    elseif ($page == "singup") include "singup.html";
+    else include "home-page.html";
+  }
+  else include "home-page.html";
+        ?>
   </main>
 
   <div class="preloader">
     <div class="spinner"></div>
   </div>
-  <footer class="bg-light p-0 m-0">
-    <p class="ps-5"><?= $_SESSION['page-title'] ?> &copy; Tüm hakları saklıdır.</p>
+  <footer class="bg-light p-0 m-0 fixed-bottom align-items-center pt-3">
+    <p><?= $_SESSION['page-title'] ?> &copy; Tüm hakları saklıdır.</p>
   </footer>
   <script src="assets/vendor/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
   <script src="assets/vendor/jquery-3.7.1/jquery-3.7.1.min.js"></script>
