@@ -21,6 +21,8 @@ require_once 'main.php';
   <link rel="stylesheet" href="assets/css/search-engine.css">
   <link rel="stylesheet" href="assets/css/theme-switch.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  
   <title><?= $_SESSION['page-title'] ?></title>
 
 </head>
@@ -95,15 +97,15 @@ require_once 'main.php';
     <?php include "login.html" ?>
   </main>
 
-  <footer class="bg-light shadow-lg">
+  <div class="preloader">
+    <div class="spinner"></div>
+  </div>
+  <footer class="bg-light p-0 m-0">
     <p class="ps-5"><?= $_SESSION['page-title'] ?> &copy; Tüm hakları saklıdır.</p>
   </footer>
   <script src="assets/vendor/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
   <script src="assets/vendor/jquery-3.7.1/jquery-3.7.1.min.js"></script>
   <script src="assets/js/script.js"></script>
-  <div class="preloader">
-    <div class="spinner"></div>
-  </div>
 </body>
 
 </html>
