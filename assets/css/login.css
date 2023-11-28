@@ -1,10 +1,4 @@
-#login{
-	--size:calc(45vh / 2);
-	padding-top: 12px;
-	margin-top: var(--size);
-	margin-bottom: var(--size);
 
-}
 #login div{
 	margin-bottom: 24px;
 }
@@ -12,22 +6,11 @@
     margin-bottom: 48px !important;
 }
 
-#singup{
-	--size:calc(39vh / 2);
-	padding-top: 12px;
-	margin-top: var(--size);
-
-}
 #singup div{
 	margin-bottom: 24px;
-}
-#singup h4{
-    margin-bottom: 48px !important;
 }
 
 .buttn{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
-
-

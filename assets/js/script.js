@@ -51,3 +51,18 @@ function changeColor() {
     document.body.style.backgroundColor = "#fff";
   }
 }
+$("#login").click(function (e) { 
+  e.preventDefault();
+  var username = $("#username").value;
+  var password = $("#password").value;
+  $.ajax({
+    type: "post",
+    url: "ajaxlogin.php",
+    data: username, password,
+    dataType: "JSON",
+    success: function (response) {
+      
+    }
+  });
+  
+});

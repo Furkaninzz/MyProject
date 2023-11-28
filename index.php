@@ -25,7 +25,7 @@ if ($_GET) {
   <link rel="stylesheet" href="assets/vendor/bootstrap-5.3.2-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <link rel="stylesheet" href="assets/css/search-engine.css">
-  <link rel="stylesheet" href="assets/css/theme-switch.css">
+  <link rel="stylesheet" href="assets/css/switch-theme.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/login.css">
 
@@ -51,8 +51,8 @@ if ($_GET) {
               <i class="uil uil-user fs-3"></i>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="index.php?page=login"><i class="uil uil-chat-bubble-user fs-2"></i> Giriş Yap</a></li>
-                <li><a class="dropdown-item" href="index.php?page=singup"><i class="uil uil-user-plus fs-2"></i> Kayıt Ol</a></li>
+                <li><a class="dropdown-item" href="index.php?page=login"><i class="uil uil-chat-bubble-user fs-5"></i> Giriş Yap</a></li>
+                <li><a class="dropdown-item" href="index.php?page=singup"><i class="uil uil-user-plus fs-5"></i> Kayıt Ol</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
