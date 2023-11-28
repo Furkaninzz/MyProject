@@ -10,6 +10,9 @@
 	--trans-timing-in: cubic-bezier(0.76, 0.05, 0.86, 0.06);
 	--trans-timing-out: cubic-bezier(0.05, 0.76, 0.06, 0.86);
 	font-size: calc(8px + (80 - 40) * (100vw - 320px) / (2560 - 320));
+
+	margin-right: -2rem;
+	margin-left: 2rem;
 }
 
 body,

@@ -40,8 +40,7 @@ body {
 	padding-top: 110px;
 }
 footer{
-	margin: 0 !important;
-	padding: 0 !important;
+	padding-left: 4rem;
 }
 
 .text-justify{

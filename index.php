@@ -35,7 +35,7 @@ if ($_GET) {
 
 <body>
   <div class="p-4 fixed-top">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded-4 shadow-lg border border-light-subtle px-5">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded-4 shadow-lg border border-success px-5">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img src="assets/favicon/black/android-chrome-512x512.png" width="40"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,15 @@ if ($_GET) {
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.php">Anasayfa</a>
             </li>
-            <li class="nav-item dropdown">
+          </ul>
+          <div class="input-box">
+            <input type="text" placeholder="Ara..." />
+            <span class="search">
+              <i class="uil uil-search search-icon"></i>
+            </span>
+            <i class="uil uil-times close-icon"></i>
+          </div>
+          <li class="nav-item dropdown list-unstyled">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="uil uil-user fs-3"></i>
               </a>
@@ -59,16 +67,6 @@ if ($_GET) {
                 <li><a class="dropdown-item" href="#"><i class="uil uil-user-times"></i> Çıkış Yap</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-            </li>
-          </ul>
-          <div class="input-box">
-            <input type="text" placeholder="Ara..." />
-            <span class="search">
-              <i class="uil uil-search search-icon"></i>
-            </span>
-            <i class="uil uil-times close-icon"></i>
-          </div>
           <label class="switch">
             <input id = "sw_input" class="switch__input" type="checkbox" role="switch" onchange="changeColor()">
             <svg class="switch__icon switch__icon--light" viewBox="0 0 12 12" width="12px" height="8px" aria-hidden="true">
@@ -113,7 +111,7 @@ if ($_GET) {
   <div class="preloader">
     <div class="spinner"></div>
   </div>
-  <footer class="bg-light p-0 m-0 fixed-bottom align-items-center pt-3">
+  <footer class="bg-light fixed-bottom">
     <p><?= $_SESSION['page-title'] ?> &copy; Tüm hakları saklıdır.</p>
   </footer>
   <script src="assets/vendor/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>

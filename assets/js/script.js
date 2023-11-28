@@ -51,7 +51,7 @@ function changeColor() {
     document.body.style.backgroundColor = "#fff";
   }
 }
-$("#login").click(function (e) { 
+$("#loginBtn").click(function (e) { 
   e.preventDefault();
   var username = $("#username").value;
   var password = $("#password").value;
