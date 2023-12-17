@@ -42,7 +42,7 @@ if ($_GET) if (isset($_GET["page"])) $page = $_GET["page"];
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.php">Anasayfa</a>
             </li>
-            <div class="input-box">
+            <div class="input-box ms-auto">
               <input type="text" placeholder="Ara..." />
               <span class="search">
                 <i class="uil uil-search search-icon"></i>
