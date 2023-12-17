@@ -1,4 +1,4 @@
-<?php
+ <?php
 require_once 'main.php';
 
 if ($_GET) {
