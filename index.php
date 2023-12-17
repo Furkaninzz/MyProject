@@ -1,11 +1,7 @@
  <?php
 require_once 'main.php';
 
-if ($_GET) {
-  if (isset($_GET["page"])) $page = $_GET["page"];
-  else header("Location:", "index.php");
-  
-}
+if ($_GET) if (isset($_GET["page"])) $page = $_GET["page"];
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -41,19 +37,19 @@ if ($_GET) {
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarSupportedContent">
           <ul class="navbar-nav align-items-center me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.php">Anasayfa</a>
             </li>
+            <div class="input-box">
+              <input type="text" placeholder="Ara..." />
+              <span class="search">
+                <i class="uil uil-search search-icon"></i>
+              </span>
+              <i class="uil uil-times close-icon"></i>
+            </div>
           </ul>
-          <div class="input-box">
-            <input type="text" placeholder="Ara..." />
-            <span class="search">
-              <i class="uil uil-search search-icon"></i>
-            </span>
-            <i class="uil uil-times close-icon"></i>
-          </div>
           <li class="nav-item dropdown list-unstyled">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="uil uil-user fs-3"></i>
@@ -67,35 +63,37 @@ if ($_GET) {
                 <li><a class="dropdown-item" href="#"><i class="uil uil-user-times"></i> Çıkış Yap</a></li>
               </ul>
             </li>
-          <label class="switch">
-            <input id = "sw_input" class="switch__input" type="checkbox" role="switch" onchange="changeColor()">
-            <svg class="switch__icon switch__icon--light" viewBox="0 0 12 12" width="12px" height="8px" aria-hidden="true">
-              <g fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round">
-                <circle cx="6" cy="6" r="2" />
-                <g stroke-dasharray="1.5 1.5">
-                  <polyline points="6 10,6 11.5" transform="rotate(0,6,6)" />
-                  <polyline points="6 10,6 11.5" transform="rotate(45,6,6)" />
-                  <polyline points="6 10,6 11.5" transform="rotate(90,6,6)" />
-                  <polyline points="6 10,6 11.5" transform="rotate(135,6,6)" />
-                  <polyline points="6 10,6 11.5" transform="rotate(180,6,6)" />
-                  <polyline points="6 10,6 11.5" transform="rotate(225,6,6)" />
-                  <polyline points="6 10,6 11.5" transform="rotate(270,6,6)" />
-                  <polyline points="6 10,6 11.5" transform="rotate(315,6,6)" />
+            <label class="switch ">
+              <input id = "sw_input" class="switch__input" type="checkbox" role="switch" onchange="changeColor()">
+              <svg class="switch__icon switch__icon--light" viewBox="0 0 12 12" width="12px" height="8px" aria-hidden="true">
+                <g fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round">
+                  <circle cx="6" cy="6" r="2" />
+                  <g stroke-dasharray="1.5 1.5">
+                    <polyline points="6 10,6 11.5" transform="rotate(0,6,6)" />
+                    <polyline points="6 10,6 11.5" transform="rotate(45,6,6)" />
+                    <polyline points="6 10,6 11.5" transform="rotate(90,6,6)" />
+                    <polyline points="6 10,6 11.5" transform="rotate(135,6,6)" />
+                    <polyline points="6 10,6 11.5" transform="rotate(180,6,6)" />
+                    <polyline points="6 10,6 11.5" transform="rotate(225,6,6)" />
+                    <polyline points="6 10,6 11.5" transform="rotate(270,6,6)" />
+                    <polyline points="6 10,6 11.5" transform="rotate(315,6,6)" />
+                  </g>
                 </g>
-              </g>
-            </svg>
-            <svg class="switch__icon switch__icon--dark" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
-              <g fill="none" stroke="#fff" stroke-width="1" stroke-linejoin="round" transform="rotate(-45,6,6)">
-                <path d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z" />
-              </g>
-            </svg>
-            <span class="switch__sr">Dark Mode</span>
-          </label>
+              </svg>
+              <svg class="switch__icon switch__icon--dark" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
+                <g fill="none" stroke="#fff" stroke-width="1" stroke-linejoin="round" transform="rotate(-45,6,6)">
+                  <path d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z" />
+                </g>
+              </svg>
+              <span class="switch__sr">Dark Mode</span>
+            </label>
         </div>
       </div>
     </nav>
   </div>
   <header>
+ <!-- Başlıklar Burada Olacaktır... -->
+
   </header>
   <main>
     <?php 

@@ -8,10 +8,6 @@
 	font-family: 'Poppins', sans-serif !important;
 }
 
-:root {
-	scroll-behavior: smooth;
-}
-
 /* width */
 ::-webkit-scrollbar {
 	width: 13px;
